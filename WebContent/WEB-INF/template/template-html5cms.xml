@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<larkersos>
+	<description>模板配置文件</description>
+	<dynamicConfig>
+		<header>
+			<description>顶部内容</description>
+			<templateFilePath>/WEB-INF/template/shop/header.ftl</templateFilePath>
+		</header>
+		<footer>
+			<description>底部内容</description>
+			<templateFilePath>/WEB-INF/template/shop/footer.ftl</templateFilePath>
+		</footer>
+		
+		<productPictureList>
+			<description>商品列表[图片]</description>
+			<templateFilePath>/WEB-INF/template/html5app/product_picture_list.ftl</templateFilePath>
+			<htmlFilePath>/html/{admin.departmentId}/www/productPictureList.html</htmlFilePath>
+		</productPictureList>
+		<productTableList>
+			<description>商品列表[表格]</description>
+			<templateFilePath>/WEB-INF/template/html5app/product_table_list.ftl</templateFilePath>
+			<htmlFilePath>/html/{admin.departmentId}/www/productTableList.html</htmlFilePath>
+		</productTableList>
+		<articleList>
+			<description>资讯文章列表</description>
+			<templateFilePath>/WEB-INF/template/html5app/article_list.ftl</templateFilePath>
+			<htmlFilePath>/html/{admin.departmentId}/www/articleList.html</htmlFilePath>
+		</articleList>
+		
+	</dynamicConfig>
+	<htmlConfig>
+		<baseJavascript>
+			<description>baseJavascript</description>
+			<templateFilePath>/WEB-INF/template/html5app/base_javascript.ftl</templateFilePath>
+			<htmlFilePath>/template/html5app/js/base.js</htmlFilePath>
+		</baseJavascript>
+		<commonFile>
+			<description>commonFile</description>
+			<templateFilePath>/WEB-INF/template/html5app/demo</templateFilePath>
+			<htmlFilePath>/html/{admin.departmentId}</htmlFilePath>
+		</commonFile>>
+		<index>
+			<description>首页</description>
+			<templateFilePath>/WEB-INF/template/html5app/index.ftl</templateFilePath>
+			<htmlFilePath>/html/{admin.departmentId}/www/index.html</htmlFilePath>
+		</index>
+		
+		
+		<jsonOrganise>
+			<description>企业信息</description>
+			<templateFilePath>/WEB-INF/template/html5app/json_organise.ftl</templateFilePath>
+			<htmlFilePath>/html/{admin.departmentId}/www/json/json_organise.html</htmlFilePath>
+		</jsonOrganise>
+		
+		
+		
+		
+		<organiseAbout>
+			<description>关于我们</description>
+			<templateFilePath>/WEB-INF/template/html5app/organise_about.ftl</templateFilePath>
+			<htmlFilePath>/html/{admin.departmentId}/www/organiseAbout.html</htmlFilePath>
+		</organiseAbout>
+		<organiseInfo>
+			<description>企业简介</description>
+			<templateFilePath>/WEB-INF/template/html5app/organise_info.ftl</templateFilePath>
+			<htmlFilePath>/html/{admin.departmentId}/www/organiseInfo.html</htmlFilePath>
+		</organiseInfo>
+		<organiseMap>
+			<description>企业地图</description>
+			<templateFilePath>/WEB-INF/template/html5app/organise_map.ftl</templateFilePath>
+			<htmlFilePath>/html/{admin.departmentId}/www/organiseMap.html</htmlFilePath>
+		</organiseMap>
+		<organiseShare>
+			<description>企业分享</description>
+			<templateFilePath>/WEB-INF/template/html5app/organise_share.ftl</templateFilePath>
+			<htmlFilePath>/html/{admin.departmentId}/www/organiseShare.html</htmlFilePath>
+		</organiseShare>
+		<organiseFeedback>
+			<description>企业反馈</description>
+			<templateFilePath>/WEB-INF/template/html5app/organise_feedback.ftl</templateFilePath>
+			<htmlFilePath>/html/{admin.departmentId}/www/organiseFeedback.html</htmlFilePath>
+		</organiseFeedback>
+
+		<article>
+			<description>资讯page</description>
+			<templateFilePath>/WEB-INF/template/html5app/news.ftl</templateFilePath>
+			<htmlFilePath>/html/{admin.departmentId}/www/news.html</htmlFilePath>
+		</article>
+		<articleContent>
+			<description>资讯文章内容</description>
+			<templateFilePath>/WEB-INF/template/html5app/content_newsDetail.ftl</templateFilePath>
+			<htmlFilePath>/html/{admin.departmentId}/www/news/{date_yyyy}{date_MM}/{uuid}.html</htmlFilePath>
+		</articleContent>
+		
+		<product>
+			<description>商品Page</description>
+			<templateFilePath>/WEB-INF/template/html5app/prod.ftl</templateFilePath>
+			<htmlFilePath>/html/{admin.departmentId}/www/prod.html</htmlFilePath>
+		</product>
+		<productContent>
+			<description>商品内容</description>
+			<templateFilePath>/WEB-INF/template/html5app/content_prodDetail.ftl</templateFilePath>
+			<htmlFilePath>/html/{admin.departmentId}/www/prod/{date_yyyy}{date_MM}/{uuid}.html</htmlFilePath>
+		</productContent>
+		
+		<login>
+			<description>登录</description>
+			<templateFilePath>/WEB-INF/template/shop/login.ftl</templateFilePath>
+			<htmlFilePath>/html/login.html</htmlFilePath>
+		</login>
+		<errorPage>
+			<description>错误页</description>
+			<templateFilePath>/WEB-INF/template/common/error_page.ftl</templateFilePath>
+			<htmlFilePath>/html/error_page.html</htmlFilePath>
+		</errorPage>
+		<errorPageAccessDenied>
+			<description>权限错误页</description>
+			<templateFilePath>/WEB-INF/template/common/error_page.ftl</templateFilePath>
+			<htmlFilePath>/html/error_page_access_denied.html</htmlFilePath>
+		</errorPageAccessDenied>
+		<errorPage500>
+			<description>错误页500</description>
+			<templateFilePath>/WEB-INF/template/common/error_page.ftl</templateFilePath>
+			<htmlFilePath>/html/error_page_500.html</htmlFilePath>
+		</errorPage500>
+		<errorPage404>
+			<description>错误页404</description>
+			<templateFilePath>/WEB-INF/template/common/error_page.ftl</templateFilePath>
+			<htmlFilePath>/html/error_page_404.html</htmlFilePath>
+		</errorPage404>
+		<errorPage403>
+			<description>错误页403</description>
+			<templateFilePath>/WEB-INF/template/common/error_page.ftl</templateFilePath>
+			<htmlFilePath>/html/error_page_403.html</htmlFilePath>
+		</errorPage403>
+	</htmlConfig>
+</larkersos>

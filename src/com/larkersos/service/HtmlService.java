@@ -1,0 +1,122 @@
+package com.larkersos.service;
+
+import java.util.Map;
+
+import com.larkersos.entity.Article;
+import com.larkersos.entity.Organise;
+import com.larkersos.entity.Product;
+
+
+/**
+ * Service接口 - 生成静态
+ * ============================================================================
+ * larkersos.com
+ * ============================================================================
+ */
+
+public interface HtmlService {
+	
+	/**
+	 * 根据Freemarker模板文件路径、Map数据生成HTML静态文件
+	 * 
+	 * @param templateFilePath
+	 *            Freemarker模板文件路径
+	 *            
+	 * @param htmlFilePath
+	 *            生成HTML静态文件存放路径
+	 * 
+	 * @param data
+	 *            Map数据
+	 * 
+	 */
+	public void buildHtml(String templateFilePath, String htmlFilePath, Map<String, Object> data);
+	
+	/**
+	 * 生成baseJavascript文件
+	 * 
+	 */
+	public void baseJavascriptBuildHtml();
+	
+	/**
+	 * 生成首页HTML静态文件
+	 * 
+	 */
+	public void indexBuildHtml();
+	
+	/**
+	 * 生成登录HTML静态文件
+	 * 
+	 */
+	public void loginBuildHtml();
+	
+	/**
+	 * 生成文章资讯首页内容HTML静态文件
+	 * 
+	 * @param article
+	 *            文章
+	 */
+	public void articlePageBuildHtml();
+	/**
+	 * 根据Article对象生成文章内容HTML静态文件
+	 * 
+	 * @param article
+	 *            文章
+	 */
+	public void articleContentBuildHtml(Article article);
+	
+	/**
+	 * 生成产品首页HTML静态文件
+	 * 
+	 * @param product
+	 *            商品
+	 */
+	public void productPageBuildHtml();
+	/**
+	 * 根据Product对象生成产品内容HTML静态文件
+	 * 
+	 * @param product
+	 *            商品
+	 */
+	public void productContentBuildHtml(Product product);
+	/**
+	 * 根据organise对象生成HTML静态文件
+	 * 
+	 * @param organise
+	 *            
+	 */
+	public void organiseBuildHtml();
+	
+	/**
+	 * 根据organise对象生成HTML静态文件
+	 * 
+	 * @param organise
+	 *            
+	 */
+	public void organiseBuildHtml(Organise organise);
+	
+	/**
+	 * 错误页HTML静态文件
+	 */
+	public void errorPageBuildHtml();
+	
+	/**
+	 * 权限错误页HTML静态文件
+	 */
+	public void errorPageAccessDeniedBuildHtml();
+	
+	/**
+	 * 错误页500 HTML静态文件
+	 */
+	public void errorPage500BuildHtml();
+	
+	/**
+	 * 错误页404 HTML静态文件
+	 */
+	public void errorPage404BuildHtml();
+	
+	/**
+	 * 错误页403 HTML静态文件
+	 */
+	public void errorPage403BuildHtml();
+	
+}

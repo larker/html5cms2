@@ -1,0 +1,1 @@
+{"result": {"resultCode": "","message": ""},"info_title":"企业简介","info_content":"${organise.description}","about_title":"关于我们","about_content":"${organise.aboutUs}"}
