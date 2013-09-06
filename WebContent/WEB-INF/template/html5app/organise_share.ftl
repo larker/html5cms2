@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:wb=“http://open.weibo.com/wb”>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
@@ -22,6 +22,8 @@
 <script type="text/javascript" src="js/hashMap.js"></script>
 <script type="text/javascript" src="js/larkersos.js"></script>
 
+<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+
 <script type="text/javascript">
 var pageIndex = 'share';
 window.addEventListener('load', loaded, false);
@@ -43,20 +45,27 @@ document.addEventListener('touchmove', function (e) { e.preventDefault(); }, fal
                     <div>
                     <ul data-role="listview" data-filter="false" id="companyInfo_list" >
 	                    <li>
-	                       <a  href="http://dyd.tapp.daoyoudao.com:8253/wappro/wapIndex_getArticleInfo.do?tenantid=10010&id=12263">
+	                       <a  href="">
 	                        <span class="list-content">分享到新浪微博</span>
 	                        </a>
 	                    </li>
 	                    <li>
-	                    <!-- JiaThis Button BEGIN -->
-<div id="ckepop">
-<span class="jiathis_txt">分享到：</span>
-<a class="jiathis_button_tsina">新浪微博</a>
-<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
-<a class="jiathis_counter_style"></a>
-</div>
-<script type="text/javascript" src="http://v2.jiathis.com/code/jia.js" charset="utf-8"></script>
-<!-- JiaThis Button END -->
+	                       <a  href="">
+	                        <span class="list-content">分享到腾讯微博</span>
+	                        </a>
+	                    </li>
+	                   	<li>
+	                       <a  href="">
+	                        <span class="list-content">分享到微信</span>
+	                        </a>
+	                    </li>
+	                   	<li>
+	                       <a  href="">
+	                        <span class="list-content">分享到微信朋友圈</span>
+	                        </a>
+	                    </li>
+	                    <li>
+<wb:share-button addition="number" type="button">微博分享</wb:share-button>
 	                    </li>
 	                </ul>
 	                </div>
