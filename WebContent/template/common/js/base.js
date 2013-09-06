@@ -7,7 +7,7 @@
  **/
  
 var larkersos = {
-	base: ${base},
+	base: "/html5cms",
 	currencySign: "￥",// 货币符号
 	currencyUnit: "元",// 货币单位
 	priceScale: "2",// 商品价格精确位数

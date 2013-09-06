@@ -32,17 +32,10 @@ document.addEventListener('touchmove', function (e) { e.preventDefault(); }, fal
 <div id="header"  data-role="header" data-theme="a" style="display:block" > 
 <#include "/WEB-INF/template/html5app/header.ftl">
 </div>
-<div id="navHeader"  data-role="navbar" data-theme="b" style="display:block" >
-<#include "/WEB-INF/template/html5app/header_nav.ftl"> 
-</div>
 
 
 <div id="content" data-role="content" >
-    <div id=wrapper class="app-wrapper" style="top:80px;">
-            <div id="content-scroller" class="app-scroller">
-			<div id="pullDown">
-				<span class="pullDownIcon"></span><span class="pullDownLabel">下拉刷新...</span>
-			</div>
+    <div id=wrapper class="app-wrapper" style="top:40px;">
 		    <div>
 				<ul data-role="listview" data-inset="true" data-filter="false">
                     <li data-role="list-divider" id="companyInfo_title">分享页</li>
@@ -51,15 +44,25 @@ document.addEventListener('touchmove', function (e) { e.preventDefault(); }, fal
                     <ul data-role="listview" data-filter="false" id="companyInfo_list" >
 	                    <li>
 	                       <a  href="http://dyd.tapp.daoyoudao.com:8253/wappro/wapIndex_getArticleInfo.do?tenantid=10010&id=12263">
-	                        <span class="list-content">智能终端的普及带动企业APP爆发式增长</span>
+	                        <span class="list-content">分享到新浪微博</span>
 	                        </a>
+	                    </li>
+	                    <li>
+	                    <!-- JiaThis Button BEGIN -->
+<div id="ckepop">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_tsina">新浪微博</a>
+<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" src="http://v2.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
 	                    </li>
 	                </ul>
 	                </div>
                     </li>
                </ul>
 			</div>
-         	</div><!-- scroller_lmc1 end -->
     </div><!-- wrapper_lmc1 end -->
 
 </div><!-- content end -->

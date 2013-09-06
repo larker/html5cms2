@@ -344,7 +344,7 @@ var banner_url = '/json/json_indexBanner.html';
 function refreshData_indexBanner () {
 	// 调用预订,返回结果为json
 	var url = _MY_DOMAIN + banner_url;
-	//alert("url===="+url);
+	//alert("refreshData_indexBanner url 0===="+url);
 	$.getJSON( url , function( data )
 	{
 		// 转化存储数据
@@ -372,20 +372,20 @@ function refreshData_indexBanner () {
 				alert("失败，请检查对应参数");
 			}
 		}
-	});	
+	});
 }
 
 // 企业信息更新
 var jsonOrganise_url = '/json/json_organise.html';
 function refreshData_organise () {
 	// 调用预订,返回结果为订单详情
-	var url = _MY_DOMAIN + jsonOrganise_url;
-	//alert("url=="+url);
+	var url = _MY_DOMAIN + jsonOrganise_url + "?t="+new Date();
+
 	$.getJSON( url , function( data )
 	{
+	
 		// 转化存储数据
 		var dataStr = JSON.stringify(data);
-		//alert(dataStr);
 		var dataJson = jQuery.parseJSON( dataStr );
 		if(dataJson.result.resultCode == ""){
 			// 转化存储数据

@@ -9,8 +9,6 @@
 <title>WEB APP系统</title>
 
 <link rel="stylesheet"  href="css/themes/default/jquery.mobile-1.3.1.min.css">
-<link rel="stylesheet"  href="js/orbit/css/orbit-1.2.3.css">
-
 <link rel="stylesheet"  href="css/larkersos.css" />
 
 <script type="text/javascript" src="js/jquery-1.10.0.min.js"></script>
@@ -31,34 +29,15 @@ document.addEventListener('touchmove', function (e) { e.preventDefault(); }, fal
 <div id="header"  data-role="header" data-theme="a" style="display:block" > 
 <#include "/WEB-INF/template/html5app/header.ftl">
 </div>
-<div id="navHeader"  data-role="navbar" data-theme="b" style="display:block" >
-<#include "/WEB-INF/template/html5app/header_nav.ftl"> 
-</div>
-
 
 <div id="content" data-role="content" >
-    <div id=wrapper class="app-wrapper" style="top:80px;">
-            <div id="content-scroller" class="app-scroller">
-			<div id="pullDown">
-				<span class="pullDownIcon"></span><span class="pullDownLabel">下拉刷新...</span>
-			</div>
-		    <div>
-				<ul data-role="listview" data-inset="true" data-filter="false">
-                    <li data-role="list-divider" id="companyFeedback_title">反馈留言页</li>
-                    <li>
-                    <div>
-                    <ul data-role="listview" data-filter="false" id="companyInfo_list" >
-	                    <li>
-	                       <a  href="http://dyd.tapp.daoyoudao.com:8253/wappro/wapIndex_getArticleInfo.do?tenantid=10010&id=12263">
-	                        <span class="list-content">智能终端的普及带动企业APP爆发式增长</span>
-	                        </a>
-	                    </li>
-	                </ul>
-	                </div>
-                    </li>
-               </ul>
-			</div>
-         	</div><!-- scroller_lmc1 end -->
+    <div id=wrapper class="app-wrapper" style="top:40px;">
+    
+		<label for="basic">联系方式（Email/手机）:</label>
+		<input type="text" name="name" id="basic" value="" data-mini="true" />
+ 		<label for="textarea-a">反馈意见:</label>
+			<textarea name="textarea" id="textarea-a">
+			</textarea>
     </div><!-- wrapper_lmc1 end -->
 
 </div><!-- content end -->

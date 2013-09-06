@@ -46,14 +46,17 @@ var pageIndex = "map";
 window.addEventListener('load', loaded, false); 
 document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
 
-
-var longitude = 116.48;
-var latitude = 39.97;
+var longitude = ${organise.longitude};
+var latitude = ${organise.latitude};
+//var longitude = 116.48;
+//var latitude = 39.97;
 var _label = '企业名称';
-var _html = "<div class='infoBoxContent'><div class='title'><strong>企业信息</strong></div>"
+var _html = "<div class='infoBoxContent'><div class='title'><strong>${organise.name}</strong></div>"
 +"<div class='list'><ul>"
-+"<li><div class='left'><img src=''/></div><div class='left'>列表信息1<p>4室2厅，205.00平米，3层</p></div><div class='rmb'>760万</div></li>"
-+"<li><div class='left'><img src=''/></div><div class='left'>列表信息2<p>4室2厅，205.00平米，2层</p></div><div class='rmb'>720万</div></li>"
++"<li><div class='left'>企业名称 ：${organise.name}</div></li>"
++"<li><div class='left'>企业地址 ：${organise.addr}</div></li>"
++"<li><div class='left'>联系人   ：${organise.contact}</div></li>"
++"<li><div class='left'>联系电话 ：${organise.phone}</div></li>"
 +"</ul></div>"
 +"</div>";
 
@@ -84,12 +87,8 @@ function showmap(){
 <div id="header"  data-role="header" data-theme="a" style="display:block" > 
 <#include "/WEB-INF/template/html5app/header.ftl">
 </div>
-<div id="navHeader"  data-role="navbar" data-theme="b" style="display:block" >
-<#include "/WEB-INF/template/html5app/header_nav.ftl"> 
-</div>
-
 <div id="content" data-role="content" >
-    <div id=wrapper class="app-wrapper" style="top:80px;" align="center">
+    <div id=wrapper class="app-wrapper" style="top:40px;" align="center">
             <div id="content-scroller" class="app-scroller">
                 <div id="pullDown" style="display:none" >
 					<span class="pullDownIcon"></span><span class="pullDownLabel">下拉刷新...</span>

@@ -354,12 +354,12 @@ public class HtmlServiceImpl implements HtmlService {
 //		organiseAboutBuildHtml(organise);
 //		// 生成组织单位简介的静态页面
 //		organiseInfoBuildHtml(organise);
-//		// 生成组织地图的静态页面
-//		organiseMapBuildHtml(organise);
-//		// 生成组织单位分享的静态页面
-//		organiseShareBuildHtml(organise);
-//		// 生成组织意见反馈的静态页面
-//		organiseFeedbackBuildHtml(organise);
+		// 生成组织地图的静态页面
+		organiseMapBuildHtml(organise);
+		// 生成组织单位分享的静态页面
+		organiseShareBuildHtml(organise);
+		// 生成组织意见反馈的静态页面
+		organiseFeedbackBuildHtml(organise);
 	}
 
 	/**
@@ -407,7 +407,15 @@ public class HtmlServiceImpl implements HtmlService {
 				.getHtmlConfig(HtmlConfig.ORGANISE_MAP);
 		if (htmlConfig != null) {
 			Map<String, Object> data = getCommonData();
-			data.put("organise", organise);
+			// 企业信息组织 larkersos
+			data.put("organise" ,organise);
+			data.put("appDomain" ,organise.getAppDomain());
+			data.put("appTitle" ,organise.getAppTitle());
+			if(StringUtils.isBlank(organise.getAppTitle())){
+				data.put("appTitle" ,organise.getName());
+			}
+			// 是否是底部链接
+			data.put("isFootLink" ,"1");
 			// 生成静态页面
 			buildHtml(htmlConfig.getTemplateFilePath(),
 					htmlConfig.getHtmlFilePath(), data);
@@ -425,7 +433,15 @@ public class HtmlServiceImpl implements HtmlService {
 				.getHtmlConfig(HtmlConfig.ORGANISE_SHARE);
 		if (htmlConfig != null) {
 			Map<String, Object> data = getCommonData();
-			data.put("organise", organise);
+			// 企业信息组织 larkersos
+			data.put("organise" ,organise);
+			data.put("appDomain" ,organise.getAppDomain());
+			data.put("appTitle" ,organise.getAppTitle());
+			if(StringUtils.isBlank(organise.getAppTitle())){
+				data.put("appTitle" ,organise.getName());
+			}
+			// 是否是底部链接
+			data.put("isFootLink" ,"1");
 			// 生成静态页面
 			buildHtml(htmlConfig.getTemplateFilePath(),
 					htmlConfig.getHtmlFilePath(), data);
@@ -442,7 +458,15 @@ public class HtmlServiceImpl implements HtmlService {
 				.getHtmlConfig(HtmlConfig.ORGANISE_FEEDBACK);
 		if (htmlConfig != null) {
 			Map<String, Object> data = getCommonData();
-			data.put("organise", organise);
+			// 企业信息组织 larkersos
+			data.put("organise" ,organise);
+			data.put("appDomain" ,organise.getAppDomain());
+			data.put("appTitle" ,organise.getAppTitle());
+			if(StringUtils.isBlank(organise.getAppTitle())){
+				data.put("appTitle" ,organise.getName());
+			}
+			// 是否是底部链接
+			data.put("isFootLink" ,"1");
 			// 生成静态页面
 			buildHtml(htmlConfig.getTemplateFilePath(),
 					htmlConfig.getHtmlFilePath(), data);

@@ -4,7 +4,7 @@
         <li>
         	<div  id="div-5_organiseAboutUsContent">
          	${organise.aboutUs}
-         	<div>
+         	</div>
         </li>
    </ul>
 </div>

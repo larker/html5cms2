@@ -65,6 +65,24 @@ $().ready(function() {
 				</tr>
 				<tr>
 					<th>
+						经度（百度）:
+					</th>
+					<td>
+						<input type="text" class="formText" name="organise.longitude" value="${(organise.longitude)!}" title="精度" />
+					</td>
+				</tr>
+				<tr>
+					<th>
+						纬度（百度）:
+					</th>
+					<td>
+						<input type="text" class="formText" name="organise.latitude" value="${(organise.latitude)!}" title="纬度" />
+					</td>
+				</tr>
+				
+				
+				<tr>
+					<th>
 						单位电话:
 					</th>
 					<td>
