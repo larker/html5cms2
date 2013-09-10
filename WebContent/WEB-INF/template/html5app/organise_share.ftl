@@ -23,6 +23,7 @@
 <script type="text/javascript" src="js/larkersos.js"></script>
 
 <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+<script src="http://mat1.gtimg.com/app/openjs/openjs.js#autoboot=no&debug=no"></script>
 
 <script type="text/javascript">
 var pageIndex = 'share';
@@ -41,39 +42,18 @@ document.addEventListener('touchmove', function (e) { e.preventDefault(); }, fal
 		    <div>
 				<ul data-role="listview" data-inset="true" data-filter="false">
                     <li data-role="list-divider" id="companyInfo_title">分享页</li>
-                    <li>
-                    <div>
-                    <ul data-role="listview" data-filter="false" id="companyInfo_list" >
 	                    <li>
-	                       <a  href="">
-	                        <span class="list-content">分享到新浪微博</span>
-	                        </a>
-	                    </li>
-	                    <li>
-	                       <a  href="">
-	                        <span class="list-content">分享到腾讯微博</span>
-	                        </a>
-	                    </li>
-	                   	<li>
-	                       <a  href="">
-	                        <span class="list-content">分享到微信</span>
-	                        </a>
-	                    </li>
-	                   	<li>
-	                       <a  href="">
-	                        <span class="list-content">分享到微信朋友圈</span>
-	                        </a>
+	                        <span class="list-content">
+	                        <wb:share-button addition="simple" type="icon" default_text="微博分享" language="zh_cn">新浪微博分享</wb:share-button>
+	                        <div id="qqwb_share__" data-appkey="801413435" data-icon="0" data-counter="0" data-content="{title}" data-pic="{pic}">腾讯微博分享</div>
+	                        </span>
 	                    </li>
 	                    <li>
 <wb:share-button addition="number" type="button">微博分享</wb:share-button>
 	                    </li>
-	                </ul>
-	                </div>
-                    </li>
                </ul>
 			</div>
     </div><!-- wrapper_lmc1 end -->
-
 </div><!-- content end -->
 
 <div id="footer" class="app-footer" data-theme="a" data-role="footer" style="display:block" >
