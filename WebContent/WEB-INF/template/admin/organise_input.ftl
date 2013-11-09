@@ -6,10 +6,10 @@
 <link rel="icon" href="favicon.ico" type="image/x-icon" />
 <#include "/WEB-INF/template/common/include.ftl">
 <link href="${base}/template/admin/css/input.css" rel="stylesheet" type="text/css" />
+<script src="${base}/ckeditor4/ckeditor.js"></script>
 <script type="text/javascript">
 $().ready(function() {
-
-
+ var editor = CKEDITOR.replace('organiseDescription'); 
 })
 </script>
 <#if !id??>
@@ -32,9 +32,6 @@ $().ready(function() {
 				</li>
 				<li>
 					<input type="button" value="企业介绍" hidefocus="true" />
-				</li>
-				<li>
-					<input type="button" value="关于我们" hidefocus="true" />
 				</li>
 			</ul>
 			<table class="inputTable tabContent">
@@ -130,17 +127,17 @@ $().ready(function() {
 					</td>
 				</tr>
 			</table>
-			<table class="inputTable tabContent">
+			<table >
 				<tr>
 					<td colspan="2">
-						<textarea name="organise.description" class="wysiwyg" style="width: 100%; height: 450px;">${(organise.description)!}</textarea>
+						<textarea name="organise.description" id="organiseDescription"   style="width: 480px; height: 600px;">${(organise.description)!}</textarea>
 					</td>
 				</tr>
 			</table>
 			<table class="inputTable tabContent">
 				<tr>
 					<td colspan="2">
-						<textarea name="organise.aboutUs" class="wysiwyg" style="width: 100%; height: 450px;">${(organise.aboutUs)!}</textarea>
+						<textarea name="organise.aboutUs" id="organiseAboutUs"  class="wysiwyg" style="width: 100%; height: 450px;">${(organise.aboutUs)!}</textarea>
 					</td>
 				</tr>
 			</table>

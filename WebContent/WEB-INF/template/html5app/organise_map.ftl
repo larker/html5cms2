@@ -46,11 +46,15 @@ var pageIndex = "map";
 window.addEventListener('load', loaded, false); 
 document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
 
+
+
+
+
 var longitude = ${organise.longitude};
 var latitude = ${organise.latitude};
 //var longitude = 116.48;
 //var latitude = 39.97;
-var _label = '企业名称';
+var _label = "${organise.name}";
 var _html = "<div class='infoBoxContent'><div class='title'><strong>${organise.name}</strong></div>"
 +"<div class='list'><ul>"
 +"<li><div class='left'>企业名称 ：${organise.name}</div></li>"
@@ -75,12 +79,11 @@ function showmap(){
 	  var marker = new BMap.Marker(new BMap.Point(longitude, latitude));
 	  marker.setLabel(new BMap.Label(_label));
 	  		marker.addEventListener("click", function(e){
-                    this.openInfoWindow(new BMap.InfoWindow(_html));
+                    //this.openInfoWindow(new BMap.InfoWindow(_html));
             });
 	  map.addOverlay(marker);// 将标注添加到地图中 
 }
 </script>
-
 
 </head>
 <body>

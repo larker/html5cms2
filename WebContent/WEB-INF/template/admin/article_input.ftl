@@ -8,7 +8,12 @@
 <link rel="icon" href="favicon.ico" type="image/x-icon" />
 <#include "/WEB-INF/template/common/include.ftl">
 <link href="${base}/template/admin/css/input.css" rel="stylesheet" type="text/css" />
+<script src="${base}/ckeditor4/ckeditor.js"></script>
 <script type="text/javascript">
+$().ready(function() {
+
+var editor = CKEDITOR.replace('articleContent'); 
+})
 function selectDepartmentPage(){
 	var returnData=window.showModalDialog("${base}/admin/organise!select.action",window,"dialogWidth:500px;status:no;dialogHeight:400px");
 	if(returnData != null){
@@ -114,7 +119,7 @@ function selectDepartmentPage(){
 						内容:
 					</th>
 					<td>
-						<textarea name="article.content" class="wysiwyg {required: true, messagePosition: '#contentMessagePosition'}" rows="20" cols="100">${(article.content)!}</textarea>
+						<textarea name="article.content" id="articleContent" class="wysiwyg {required: true, messagePosition: '#contentMessagePosition'}" rows="20" cols="100">${(article.content)!}</textarea>
 						<div class="blank"></div>
 						<span id="contentMessagePosition"></span>
 					</td>

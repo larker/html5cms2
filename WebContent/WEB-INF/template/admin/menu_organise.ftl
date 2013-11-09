@@ -16,7 +16,10 @@
 				<span>公司信息管理</span>
 			</dt>
 			<dd>
-				<a href="organise!edit.action" target="mainFrame">企业信息维护</a>
+				<a href="organise!edit.action" target="mainFrame">企业基本信息</a>
+			</dd>
+			<dd>
+				<a href="organise!aboutUs.action" target="mainFrame">关于我们</a>
 			</dd>
 		</dl>
 		<dl>

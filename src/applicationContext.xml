@@ -61,6 +61,8 @@
 				hibernate.jdbc.fetch_size=50
 				<!-- 数据库批量更新数 -->
 				hibernate.jdbc.batch_size=30
+				<!-- 数据库自动重连 -->
+				hibernate.autoReconnect=true
 			</value>
 		</property>
 

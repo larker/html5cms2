@@ -3,6 +3,7 @@ var myScroll,
 	generatedCount = 0;
 var pageIndex = "1";
 var myAppName= "larkersos";
+var divIndex,curDiv;
 
 var hashMapForScroll = new HashMap();
 /*!

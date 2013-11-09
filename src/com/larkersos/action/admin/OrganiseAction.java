@@ -30,6 +30,11 @@ public class OrganiseAction extends BaseAdminAction {
 
 	private static final long serialVersionUID = -4433964283757192335L;
 	
+	// 编辑企业简介
+	public static final String ORG_DESCRIPTION = "description";
+	// 编辑企业关于我们
+	public static final String ORG_ABOUT_US = "aboutUs";
+	
 	private Organise organise;
 
 	@Resource
@@ -50,7 +55,7 @@ public class OrganiseAction extends BaseAdminAction {
 		return INPUT;
 	}
 
-	// 编辑
+	// 编辑基本信息
 	public String edit() {
 		// 判断组织机构，默认编辑当前所属
 		if(StringUtils.isEmpty(id)){
@@ -59,6 +64,27 @@ public class OrganiseAction extends BaseAdminAction {
 
 		organise = organiseService.load(id);
 		return INPUT;
+	}
+	
+	// 编辑企业简介
+	public String description() {
+		// 判断组织机构，默认编辑当前所属
+		if(StringUtils.isEmpty(id)){
+			id = SystemConfigUtil.getDepartmentId();
+		}
+
+		organise = organiseService.load(id);
+		return ORG_DESCRIPTION;
+	}
+	// 编辑企业关于我们
+	public String aboutUs() {
+		// 判断组织机构，默认编辑当前所属
+		if(StringUtils.isEmpty(id)){
+			id = SystemConfigUtil.getDepartmentId();
+		}
+
+		organise = organiseService.load(id);
+		return ORG_ABOUT_US;
 	}
 
 	// 列表

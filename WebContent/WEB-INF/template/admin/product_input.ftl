@@ -6,8 +6,11 @@
 <link rel="icon" href="favicon.ico" type="image/x-icon" />
 <#include "/WEB-INF/template/common/include.ftl">
 <link href="${base}/template/admin/css/input.css" rel="stylesheet" type="text/css" />
+<script src="${base}/ckeditor4/ckeditor.js"></script>
 <script type="text/javascript">
 $().ready(function() {
+
+	var editor = CKEDITOR.replace('productDescription'); 
 
 	// 查询商品属性
 	$("#productTypeId").change( function() {
@@ -347,7 +350,7 @@ function selectDepartmentPage(){
 			<table class="inputTable tabContent">
 				<tr>
 					<td colspan="2">
-						<textarea name="product.description" class="wysiwyg" style="width: 100%; height: 450px;">${(product.description)!}</textarea>
+						<textarea name="product.description" id="productDescription"  class="wysiwyg" style="width: 100%; height: 450px;">${(product.description)!}</textarea>
 					</td>
 				</tr>
 			</table>

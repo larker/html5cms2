@@ -120,6 +120,15 @@ public class HtmlServiceImpl implements HtmlService {
 				navigationService.getMiddleNavigationList());
 		commonData.put("bottomNavigationList",
 				navigationService.getBottomNavigationList());
+		
+		// 企业信息组织 larkersos
+		Organise organise = organiseDao.get(SystemConfigUtil.getDepartmentId());
+		commonData.put("organise" ,organise);
+		commonData.put("appDomain" ,organise.getAppDomain());
+		commonData.put("appTitle" ,organise.getAppTitle());
+		if(StringUtils.isBlank(organise.getAppTitle())){
+			commonData.put("appTitle" ,organise.getName());
+		}
 
 		return commonData;
 	}
@@ -159,15 +168,6 @@ public class HtmlServiceImpl implements HtmlService {
 				.getHtmlConfig(HtmlConfig.INDEX);
 		if (htmlConfig != null) {
 			Map<String, Object> data = getCommonData();
-			
-			// 企业信息组织 larkersos
-			Organise organise = organiseDao.get(SystemConfigUtil.getDepartmentId());
-			data.put("organise" ,organise);
-			data.put("appDomain" ,organise.getAppDomain());
-			data.put("appTitle" ,organise.getAppTitle());
-			if(StringUtils.isBlank(organise.getAppTitle())){
-				data.put("appTitle" ,organise.getName());
-			}
 
 			// 商品信息
 			// 热门首页展示

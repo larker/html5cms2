@@ -43,14 +43,10 @@ document.addEventListener('touchmove', function (e) { e.preventDefault(); }, fal
 				<ul data-role="listview" data-inset="true" data-filter="false">
                     <li data-role="list-divider" id="companyInfo_title">分享页</li>
 	                    <li>
-	                        <span class="list-content">
-	                        <wb:share-button addition="simple" type="icon" default_text="微博分享" language="zh_cn">新浪微博分享</wb:share-button>
-	                        <div id="qqwb_share__" data-appkey="801413435" data-icon="0" data-counter="0" data-content="{title}" data-pic="{pic}">腾讯微博分享</div>
-	                        </span>
-	                    </li>
-	                    <li>
-<wb:share-button addition="number" type="button">微博分享</wb:share-button>
-	                    </li>
+	                       <a  href="http://service.weibo.com/share/share.php?url=${appDomain}&title=${appTitle}">
+                    		<span class="list-content">分享到新浪微博</span>
+                    		</a>
+	                </li>
                </ul>
 			</div>
     </div><!-- wrapper_lmc1 end -->
